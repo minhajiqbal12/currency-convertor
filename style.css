@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#head1 {
+    margin-top: 1rem;
+    border: 1px solid rgb(47, 42, 42);
+    border-radius: 10px;
+    background-color: rgb(144, 118, 85);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(232, 184, 166);
+    padding: 20px;
+}
+
+.container {
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(black, blue, black, blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+form select, button, input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input {
+    border: 1px solid rgb(177, 156, 156);
+    height: 35px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 10px;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.select-container img {
+    max-width: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.select-container select {
+    border: 1px solid rgb(177, 156, 156);
+    padding: 5px;
+}
+
+.msg {
+    margin: 1.5rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+form button {
+    height: 3rem;
+    background-color: rgb(144, 118, 85);
+    border: 1px solid rgb(47, 42, 42);
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    #head1 {
+        font-size: 1.5rem;
+    }
+
+    .dropdown {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .select-container {
+        width: 100%;
+    }
+}
